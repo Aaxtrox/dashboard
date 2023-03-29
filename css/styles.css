@@ -83,6 +83,7 @@ nav img {
 nav ul {
     grid-row: span 6;
     display: grid;
+    justify-items: self-start;
     grid-template-rows: repeat(8, 1fr);
     gap: var(--gap-nav-ul);
 }
@@ -93,6 +94,8 @@ nav li img {
 }
 
 nav li {
+    display: flex;
+    align-items: flex-end;
     list-style: none;
     cursor: pointer;
 }
@@ -102,9 +105,11 @@ nav li a {
 }
 
 nav li span {
+    margin-left: var(--gap-nav-ul);
     font-family: var(--font-style-header);
     font-size: var(--font-style-size-small);
 }
+
 /* section */
 section {
     background-color: var(--primary-color);
