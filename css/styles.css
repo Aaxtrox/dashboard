@@ -1,0 +1,47 @@
+/* custom properties */
+:root {
+    --primary-color: #115e59;
+    --secondary-color: #14b8a6;
+    --tertiary-color: #0d9488;
+    --quaternary-color: #0f766e;
+    --font-color: black;
+}
+
+/* body */
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 18fr;
+}
+
+/* header */
+header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    background-color: var(--tertiary-color);
+    color: var(--font-color);
+}
+
+header img {
+    width: 15%;
+    height: auto;
+    background-color: var(--secondary-color);
+    border-radius: 100%;
+}
+
+header img:hover {
+    background-color: var(--quaternary-color);
+}
+
+header span {
+    grid-column: 4;
+    align-self: center;
+}
+
+header div {
+    grid-column: 7;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
