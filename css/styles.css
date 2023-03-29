@@ -7,13 +7,13 @@
     --tertiary-color: #0d9488;
     --quaternary-color: #14b8a6;
     --font-color: black;
-    --font-style-header: 'Josefin Sans', sans-serif;
+    --font-style: 'Josefin Sans', sans-serif;
     --font-style-size: 1.6rem;
-    --font-style-size-small: 1.2rem;
+    --font-style-size-small: 1.5rem;
+    --gap-header: 1.8rem;
     --img-width-header: 1.5rem;
     --img-width-logo: 6rem;
-    --img-width-list: 2rem;
-    --gap-nav-ul: 1.3rem;
+    --nav-li-img: 1.5rem;
 }
 
 /* body */
@@ -32,22 +32,22 @@ header {
     color: var(--font-color);
 }
 
-header span {
+header > span {
     grid-column: 4;
     align-self: center;
-    font-family: var(--font-style-header);
+    font-family: var(--font-style);
     font-size: var(--font-style-size);
 }
 
-header div {
+header > div {
     grid-column: 7;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: var(--gap-header);
 }
 
-header img {
+header > div > img {
     width: var(--img-width-header);
     height: auto;
     background-color: var(--tertiary-color);
@@ -55,7 +55,7 @@ header img {
     cursor: pointer;
 }
 
-header img:hover {
+header > div > img:hover {
     background-color: var(--quaternary-color);
 }
 
@@ -68,52 +68,34 @@ main {
 /* nav */
 nav {
     background-color: var(--tertiary-color);
-    display: grid;
-    grid-template-rows: repeat(9, 1fr);
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav > div {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-nav img {
+nav > div > img {
     width: var(--img-width-logo);
     height: auto;
-    grid-row: span 2;
 }
 
-nav ul {
-    grid-row: span 4;
-    display: grid;
-    grid-template-rows: repeat(8, 1fr);
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    gap: var(--gap-nav-ul);
+li {
+    list-style: none;
 }
 
-nav li:hover {
-    background-color: var(--primary-color);
-}
-
-nav li img {
-    width: var(--img-width-list);
+img {
+    width: var(--nav-li-img);
     height: auto;
 }
 
-nav li {
-    display: flex;
-    align-items: flex-end;
-    list-style: none;
-    cursor: pointer;
-    padding-left: 1rem;
-}
-
-nav li a {
-    text-decoration: none;
-}
-
-nav li span {
-    margin-left: var(--gap-nav-ul);
-    font-family: var(--font-style-header);
+li > span {
+    font-family: var(--font-style);
     font-size: var(--font-style-size-small);
 }
 
