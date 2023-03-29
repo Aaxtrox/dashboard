@@ -9,7 +9,8 @@
     --font-color: black;
     --font-style-header: 'Josefin Sans', sans-serif;
     --font-style-size: 1.6rem;
-    --img-width: 1.5rem;
+    --img-width-header: 1.5rem;
+    --img-width-logo: 6rem;
 }
 
 /* body */
@@ -40,11 +41,11 @@ header div {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 2.5rem;
 }
 
 header img {
-    width: var(--img-width);
+    width: var(--img-width-header);
     height: auto;
     background-color: var(--tertiary-color);
     border-radius: 100%;
@@ -53,6 +54,31 @@ header img {
 
 header img:hover {
     background-color: var(--quaternary-color);
+}
+
+/* main */
+main {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+/* nav */
+nav {
+    background-color: var(--tertiary-color);
+    display: grid;
+    grid-template-rows: repeat(9, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+nav img {
+    width: var(--img-width-logo);
+    height: auto;
+}
+
+/* section */
+section {
+    background-color: var(--primary-color);
 }
 
 /* media queries */
