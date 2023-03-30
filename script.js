@@ -3,7 +3,8 @@ var restore = document.getElementById("window-restore");
 var close = document.getElementById("window-close");
 var all = document.getElementById("color-change-all");
 var other = document.getElementById("color-change-other");
-
+var windows = document.getElementById("color-change-windows");
+var linux = document.getElementById("color-change-linux");
 
 //add event listener on click to restore button
 restore.addEventListener("click", function() {
@@ -31,3 +32,4 @@ other.addEventListener("click", function() {
     document.getElementById("color-change-other").style.color = "tomato";
     document.getElementById("color-change-all").style.color = "black";
 });
+

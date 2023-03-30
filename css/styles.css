@@ -212,6 +212,7 @@ section > div:first-of-type > div:last-of-type {
 section > div:first-of-type > div:last-of-type > img {
     width: var(--nav-li-img);
     height: auto;
+    cursor: pointer;
 }
 /* media queries */
 @media screen and (max-width: 1500px) {
