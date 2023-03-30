@@ -74,7 +74,7 @@ nav > div > img {
     margin-bottom: var(--gap-nav);
 }
 
-img {
+nav img {
     width: var(--nav-li-img);
     margin-left: var(--gap-nav);
 }
@@ -118,6 +118,61 @@ nav li:hover {
 /* section */
 section {
     background-color: var(--primary-color);
+    display: grid;
+    grid-template-rows: 1fr 12fr 1fr;
+}
+
+section > div:first-of-type {
+    display:grid;
+    grid-template-columns: 8fr repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+section > div:first-of-type > form {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+section > div:first-of-type > form > input {
+    height: var(--font-style-size);
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+    border: none;
+    padding-left: 4%;
+    font-family: var(--font-style);
+    font-size: var(--font-style-size-small);
+    background-color: var(--tertiary-color);
+    color: var(--font-color);
+}
+
+section > div:first-of-type > form > input::placeholder {
+    font-family: var(--font-style);
+    font-size: var(--font-style-size-small);
+    color: var(--font-color);
+}
+
+section > div:first-of-type > form > input:focus {
+    outline: none;
+}
+
+section > div:first-of-type > form > button {
+    display: inline-block;
+    position: absolute;
+    background: transparent;
+    border: none;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+button img {
+    width: var(--nav-li-img);
+    height: auto;
 }
 
 /* media queries */
