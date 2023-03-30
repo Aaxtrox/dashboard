@@ -17,6 +17,7 @@
     --img-width-logo: 7rem;
     --nav-li-img: 1.5rem;
     --gap-nav: 1rem;
+    --gap-mobile: 0.3rem;
 }
 
 /* body */
@@ -202,7 +203,6 @@ section > div:first-of-type > div:first-of-type > span:hover {
 /* windows and linux logo */
 section > div:first-of-type > div:last-of-type {
     display: flex;
-    align-items: center;
     gap: var(--gap-header);
 }
 
@@ -211,6 +211,7 @@ section > div:first-of-type > div:last-of-type > img {
     height: auto;
     cursor: pointer;
 }
+
 /* media queries */
 @media screen and (max-width: 1500px) {
     html {
@@ -221,6 +222,17 @@ section > div:first-of-type > div:last-of-type > img {
 @media screen and (max-width: 1000px) {
     html {
         font-size: 70%;
+    }
+
+    section > div:first-of-type > div:last-of-type {
+        flex-direction: column;
+        gap: var(--gap-mobile);
+    }
+
+    section > div:first-of-type > div:first-of-type {
+        flex-direction: column;
+        gap: var(--gap-mobile);
+        align-items: center;
     }
 }
 
