@@ -126,11 +126,12 @@ section {
 
 section > div:first-of-type {
     display:grid;
-    grid-template-columns: 8fr repeat(2, 1fr);
+    grid-template-columns: 5fr repeat(2, 1fr);
     justify-items: center;
     align-items: center;
 }
 
+/* search bar */
 section > div:first-of-type > form {
     width: 90%;
     height: var(--font-style-size);
@@ -178,6 +179,40 @@ button img {
     height: auto;
 }
 
+/* span after search bar */
+section > div:first-of-type > div:first-of-type {
+    display: flex;
+    gap: var(--gap-header);
+}
+
+section > div:first-of-type > div:first-of-type > span {
+    font-family: var(--font-style);
+    font-size: var(--font-style-size-small);
+    cursor: pointer;
+}
+
+section > div:first-of-type > div:first-of-type > span:first-of-type {
+    color: tomato;
+}
+
+section > div:first-of-type > div:first-of-type > span:hover {
+    color: var(--quaternary-color);
+}
+
+/* windows and linux logo */
+section > div:first-of-type > div:last-of-type {
+    width: var(--nav-li-img);
+    height: auto;
+    display: flex;
+    gap: var(--gap-header);
+    justify-content: center;
+    align-items: center;
+}
+
+section > div:first-of-type > div:last-of-type > img {
+    width: var(--nav-li-img);
+    height: auto;
+}
 /* media queries */
 @media screen and (max-width: 1500px) {
     html {
