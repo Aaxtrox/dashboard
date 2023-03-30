@@ -201,12 +201,9 @@ section > div:first-of-type > div:first-of-type > span:hover {
 
 /* windows and linux logo */
 section > div:first-of-type > div:last-of-type {
-    width: var(--nav-li-img);
-    height: auto;
     display: flex;
-    gap: var(--gap-header);
-    justify-content: center;
     align-items: center;
+    gap: var(--gap-header);
 }
 
 section > div:first-of-type > div:last-of-type > img {

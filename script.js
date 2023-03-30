@@ -3,8 +3,8 @@ var restore = document.getElementById("window-restore");
 var close = document.getElementById("window-close");
 var all = document.getElementById("color-change-all");
 var other = document.getElementById("color-change-other");
-var windows = document.getElementById("color-change-windows");
-var linux = document.getElementById("color-change-linux");
+var windows = document.getElementById("windows");
+var linux = document.getElementById("linux");
 
 //add event listener on click to restore button
 restore.addEventListener("click", function() {
@@ -33,3 +33,14 @@ other.addEventListener("click", function() {
     document.getElementById("color-change-all").style.color = "black";
 });
 
+//add event listener on click windows img
+windows.addEventListener("click", function() {
+    windows.src = "./img/microsoft-windows-tomato.png";
+    linux.src = "./img/linux.png";
+});
+
+//add event listener on click linux img
+linux.addEventListener("click", function() {
+    linux.src = "./img/linux-tomato.png";
+    windows.src = "./img/microsoft-windows.png";
+});
