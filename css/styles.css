@@ -131,6 +131,7 @@ section > div:first-of-type {
 
 section > div:first-of-type > form {
     width: 90%;
+    height: var(--font-style-size);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,12 +139,12 @@ section > div:first-of-type > form {
 }
 
 section > div:first-of-type > form > input {
-    height: var(--font-style-size);
     width: 100%;
+    height: 100%;
     display: block;
     border-radius: 15px;
     border: none;
-    padding-left: 4%;
+    padding: 0 0 0 10%;
     font-family: var(--font-style);
     font-size: var(--font-style-size-small);
     background-color: var(--tertiary-color);
@@ -153,7 +154,7 @@ section > div:first-of-type > form > input {
 section > div:first-of-type > form > input::placeholder {
     font-family: var(--font-style);
     font-size: var(--font-style-size-small);
-    color: var(--font-color);
+    color: var(--primary-color);
 }
 
 section > div:first-of-type > form > input:focus {
@@ -165,8 +166,8 @@ section > div:first-of-type > form > button {
     position: absolute;
     background: transparent;
     border: none;
-    top: 0;
-    left: 0;
+    top: -2px;
+    left: 2%;
     z-index: 2;
 }
 
