@@ -241,3 +241,9 @@ section > div:first-of-type > div:last-of-type > img {
         font-size: 60%;
     }
 }
+
+@media screen and (max-width: 600px) {
+    section > div:first-of-type > form > input {
+        padding: 0 0 0 19%;
+    }
+}
