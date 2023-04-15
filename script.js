@@ -1,6 +1,7 @@
 // select buttons
 var restore = document.getElementById("window-restore");
 var close = document.getElementById("window-close");
+var exit = document.getElementById("exit-button");
 var all = document.getElementById("color-change-all");
 var other = document.getElementById("color-change-other");
 var windows = document.getElementById("windows");
@@ -16,8 +17,11 @@ restore.addEventListener("click", function() {
     }
 });
 
-//add event listener on click to close button
+//add event listener on click to close button or exit button
 close.addEventListener("click", function() {
+    window.location.href = "https://www.google.com";
+});
+exit.addEventListener("click", function() {
     window.location.href = "https://www.google.com";
 });
 

@@ -114,18 +114,23 @@ nav li {
     padding: var(--gap-nav);
 }
 
+#library {
+    background-color: var(--primary-color);
+}
+
 nav li:hover {
     background-color: var(--primary-color);
 }
 
 /* section */
-section {
+.game-list {
+    visibility: visible;
     background-color: var(--primary-color);
     display: grid;
-    grid-template-rows: 1fr 12fr 1fr;
+    grid-template-rows: 1fr 13fr;
 }
 
-section > div:first-of-type {
+.search-bar {
     display:grid;
     grid-template-columns: 5fr repeat(2, 1fr);
     justify-items: center;
@@ -133,7 +138,7 @@ section > div:first-of-type {
 }
 
 /* search bar */
-section > div:first-of-type > form {
+.search-bar > form {
     width: 90%;
     height: var(--font-style-size);
     display: flex;
@@ -142,7 +147,7 @@ section > div:first-of-type > form {
     position: relative;
 }
 
-section > div:first-of-type > form > input {
+.search-bar > form > input {
     width: 100%;
     height: 100%;
     display: block;
@@ -155,17 +160,17 @@ section > div:first-of-type > form > input {
     color: var(--font-color);
 }
 
-section > div:first-of-type > form > input::placeholder {
+.search-bar > form > input::placeholder {
     font-family: var(--font-style);
     font-size: var(--font-style-size-small);
     color: var(--primary-color);
 }
 
-section > div:first-of-type > form > input:focus {
+.search-bar > form > input:focus {
     outline: none;
 }
 
-section > div:first-of-type > form > button {
+.search-bar > form > button {
     display: inline-block;
     position: absolute;
     background: transparent;
@@ -181,32 +186,32 @@ button img {
 }
 
 /* span after search bar */
-section > div:first-of-type > div:first-of-type {
+.search-bar > div:first-of-type {
     display: flex;
     gap: var(--gap-header);
 }
 
-section > div:first-of-type > div:first-of-type > span {
+.search-bar > div:first-of-type > span {
     font-family: var(--font-style);
     font-size: var(--font-style-size-small);
     cursor: pointer;
 }
 
-section > div:first-of-type > div:first-of-type > span:first-of-type {
+.search-bar > div:first-of-type > span:first-of-type {
     color: tomato;
 }
 
-section > div:first-of-type > div:first-of-type > span:hover {
+.search-bar > div:first-of-type > span:hover {
     color: var(--quaternary-color);
 }
 
 /* windows and linux logo */
-section > div:first-of-type > div:last-of-type {
+.search-bar > div:last-of-type {
     display: flex;
     gap: var(--gap-header);
 }
 
-section > div:first-of-type > div:last-of-type > img {
+.search-bar > div:last-of-type > img {
     width: var(--nav-li-img);
     height: auto;
     cursor: pointer;
@@ -224,12 +229,12 @@ section > div:first-of-type > div:last-of-type > img {
         font-size: 70%;
     }
 
-    section > div:first-of-type > div:last-of-type {
+    .search-bar > div:last-of-type {
         flex-direction: column;
         gap: var(--gap-mobile);
     }
 
-    section > div:first-of-type > div:first-of-type {
+    .search-bar > div:first-of-type {
         flex-direction: column;
         gap: var(--gap-mobile);
         align-items: center;
@@ -243,7 +248,7 @@ section > div:first-of-type > div:last-of-type > img {
 }
 
 @media screen and (max-width: 600px) {
-    section > div:first-of-type > form > input {
+    .search-bar > form > input {
         padding: 0 0 0 19%;
     }
 }
