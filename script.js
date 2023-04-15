@@ -37,12 +37,11 @@ restore.addEventListener("click", function() {
 
 //add event listener on click to close button or exit button
 close.addEventListener("click", function() {
-    //run function exit
-    exit();
+    location.href = "https://www.google.com";
 });
+
 exit.addEventListener("click", function() {
-    //run function exit
-    exit();
+    location.href = "https://www.google.com";
 });
 
 //add event listener on click to library button and run function active
@@ -103,12 +102,6 @@ linux.addEventListener("click", function() {
     linux.src = "./img/linux-tomato.png";
     windows.src = "./img/microsoft-windows.png";
 });
-
-//create function exit
-function exit() {
-    //redirect to google.com
-    window.location.href = "https://www.google.com";
-}
 
 //create function active
 function active() {
