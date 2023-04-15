@@ -114,10 +114,6 @@ nav li {
     padding: var(--gap-nav);
 }
 
-#library {
-    background-color: var(--primary-color);
-}
-
 nav li:hover {
     background-color: var(--primary-color);
 }
