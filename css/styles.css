@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Lepcha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gidugu&family=Josefin+Sans:wght@700&display=swap');
 
 /* custom properties */
 :root {
@@ -228,6 +229,13 @@ button img {
     animation: spin 2s linear infinite;
 }
 
+.links-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -235,6 +243,68 @@ button img {
     100% {
         transform: rotate(360deg);
     }
+}
+
+/* footer */
+footer > div:first-of-type {
+    font-size: var(--font-style-size-small);
+    font-family: var(--font-style);
+}
+
+footer > div:nth-child(2) {
+    display: flex;
+}
+
+footer > div {
+    font-size: 0.9rem;
+    margin: 1.6rem;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.icon{
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    background: #fff;
+    margin: 0 20px 20px 20px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 37px;
+    font-family: sans-serif;
+    overflow: hidden;
+    box-shadow: 2px 5px 10px rgba(150, 150, 150, .3);
+    transition: all .1s ease-out;
+}
+.icon:hover{
+    width: 200px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+}
+.icon:hover i{
+    color: #fff;
+}
+.icon .fa-linkedin-in{
+    color: #0077B5;
+}
+.lnk:hover{
+    background: #0077B5;
+}
+.icon .fa-github{
+    color: #000;
+}
+.git:hover{
+    background: #000;
+}
+a{
+    text-decoration: none;
+    color: #fff;
 }
 
 /* media queries */

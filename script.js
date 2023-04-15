@@ -1,3 +1,5 @@
+document.getElementById("year").innerHTML = new Date().getFullYear();
+
 // select buttons
 var restore = document.getElementById("window-restore");
 var close = document.getElementById("window-close");
