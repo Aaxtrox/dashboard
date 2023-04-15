@@ -15,11 +15,13 @@ var windows = document.getElementById("windows");
 var linux = document.getElementById("linux");
 var games = document.getElementById("game-list");
 var loading = document.getElementById("loading");
+var links_section = document.getElementById("links-section");
 
 // library background color #0d9488 as default
 library.style.backgroundColor = "#115e59";
-//loading display none as default
-games.style.display = "none";
+//loading and links display none as default
+loading.style.display = "none";
+links_section.style.display = "none";
 
 //add event listener on click to restore button
 restore.addEventListener("click", function() {
@@ -118,11 +120,32 @@ function active() {
     documentation.style.backgroundColor = "";
     //grab id name of clicked button
     var id = this.id;
-    //if id name is equal to library
-    if (id == "library" || id == "stores" || id == "settings" ||
-    id == "downloads" || id == "manage-accounts" || id == "links" ||
-    id == "documentation") {
-        //change background color of clicked button
-        this.style.backgroundColor = "#115e59";
+    //change background color of clicked button
+    this.style.backgroundColor = "#115e59";
+    //run function display and pass id name
+    display(id);
+}
+
+function display(id) {
+    console.log(id);
+    //if id name is equal to library do nothing
+    if (id == "library") {
+        //games display block
+        games.style.display = "";
+        //loading display none
+        loading.style.display = "none";
+        links_section.style.display = "none";
+    } else if (id == "links") {
+        //games display none
+        games.style.display = "none";
+        links_section.style.display = "";
+        //loading display block
+        loading.style.display = "none";
+    } else {
+        //games display none
+        games.style.display = "none";
+        links_section.style.display = "none";
+        //loading display block
+        loading.style.display = ""
     }
 }
