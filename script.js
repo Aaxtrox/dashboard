@@ -103,6 +103,14 @@ linux.addEventListener("click", function() {
     windows.src = "./img/microsoft-windows.png";
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    [].forEach.call(document.querySelectorAll(".hamburger"), function(el) {
+       el.addEventListener('click', function() {
+          document.querySelector(".hamburger").classList.toggle("is-active"); 
+       })
+    })
+});
+
 //create function active
 function active() {
     //set background color #0d9488 to all buttons
