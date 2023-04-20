@@ -69,7 +69,7 @@ header > div > img:hover {
     height: 2px;
     background-color: black;
     display: block;
-    margin: 5px auto;
+    margin-bottom: 5px;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -80,6 +80,7 @@ header > div > img:hover {
 }
   
 .hamburger{
+    padding-top: 30%;
     display: none;
     grid-column: 1;
     -webkit-transition: all 0.3s ease-in-out;
