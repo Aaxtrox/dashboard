@@ -80,7 +80,7 @@ header > div > img:hover {
 }
   
 .hamburger{
-    padding-top: 30%;
+    padding-top: 18%;
     display: none;
     grid-column: 1;
     -webkit-transition: all 0.3s ease-in-out;
@@ -89,6 +89,7 @@ header > div > img:hover {
 }
   
 .hamburger.is-active{
+    padding-top: 28%;
     animation: smallbig 0.6s forwards;
 }
   
