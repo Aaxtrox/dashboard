@@ -19,6 +19,7 @@ var games = document.getElementById("game-list");
 var loading = document.getElementById("loading");
 var links_section = document.getElementById("links-section");
 var hamburger = document.querySelector(".hamburger");
+var searchbutton = document.getElementById("search-bar-button");
 
 // library background color #0d9488 as default
 library.style.backgroundColor = "#115e59";
@@ -32,10 +33,17 @@ hamburger.addEventListener("click", function() {
     if (!hamburger.classList.contains("is-active")) {
         //set nav to transform none
         document.querySelector("nav").style.transform = "none";
+        //set searchbutton to display none
+        searchbutton.style.display = "none";
         // else if hamburger button does not have class is-active
     } else if (hamburger.classList.contains("is-active")) {
         //set nav to transform translate(-100%)
         document.querySelector("nav").style.transform = "translate(-100%, 0)";
+        //delay 0.3s
+        setTimeout(function() {
+            //set searchbutton to display block
+            searchbutton.style.display = "block";
+        }, 300);
     }
 });
 
