@@ -304,7 +304,7 @@ button img {
 .game-portfolio {
     display: grid;
     gap: var(--gap-nav);
-    grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
+    grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
     grid-template-rows: max-content;
     justify-content: center;
 }
