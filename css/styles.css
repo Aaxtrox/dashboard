@@ -284,6 +284,23 @@ button img {
     cursor: pointer;
 }
 
+/* game list */
+.game-portfolio {
+    display: grid;
+    gap: var(--gap-nav);
+    grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+}
+
+.game-portfolio img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    margin: var(--gap-nav);
+    border-radius: 10px;
+    padding-bottom: 30px;
+    background-color: var(--tertiary-color);
+}
+
 /* loader */
 .loading {
     display: flex;
