@@ -31,6 +31,7 @@ body {
 /* header */
 header {
     display: grid;
+    padding: 1% 0;
     grid-template-columns: repeat(7, 1fr);
     justify-items: center;
     background-color: var(--secondary-color);
@@ -169,7 +170,7 @@ ul {
 nav {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 3rem;
     background-color: var(--tertiary-color);
 }
 
@@ -206,12 +207,14 @@ nav li:hover {
 /* section .game-list*/
 .game-list {
     background-color: var(--primary-color);
-    display: grid;
-    grid-template-rows: 1fr 13fr;
+    /*display: grid;
+    grid-template-rows: 1fr 13fr;*/
 }
 
 .search-bar {
     display:grid;
+    height: fit-content;
+    padding: 2% 0 2% 0;
     grid-template-columns: 5fr repeat(2, 1fr);
     justify-items: center;
     align-items: center;
@@ -302,6 +305,7 @@ button img {
     display: grid;
     gap: var(--gap-nav);
     grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
+    grid-template-rows: max-content;
     justify-content: center;
 }
 
