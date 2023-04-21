@@ -301,7 +301,8 @@ button img {
 .game-portfolio {
     display: grid;
     gap: var(--gap-nav);
-    grid-template-columns: repeat(auto-fit, minmax(140px, 240px));
+    grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
+    justify-content: center;
 }
 
 .game-portfolio div {
