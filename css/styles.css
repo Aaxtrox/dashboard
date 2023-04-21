@@ -380,15 +380,9 @@ a{
 }
 
 /* media queries */
-@media screen and (max-width: 1500px) {
-    html {
-        font-size: 80%;
-    }
-}
-
 @media screen and (max-width: 1000px) {
     html {
-        font-size: 70%;
+        font-size: 80%;
     }
 
     .search-bar > div:last-of-type {
@@ -405,7 +399,7 @@ a{
 
 @media screen and (max-width: 700px) {
     html {
-        font-size: 60%;
+        font-size: 75%;
     }
     .hamburger {
         display: block;
