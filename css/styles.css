@@ -288,17 +288,39 @@ button img {
 .game-portfolio {
     display: grid;
     gap: var(--gap-nav);
-    grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 240px));
+}
+
+.game-portfolio div {
+    cursor: pointer;
+    height: 280px;
+    margin: var(--gap-nav);
+    border-radius: 5px;
+    background-color: var(--tertiary-color);
+    transition: all .2s ease-in-out;
+    position: relative;
+}
+
+.game-portfolio img:last-of-type {
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    left: 80%;
 }
 
 .game-portfolio img {
     width: 100%;
-    height: auto;
-    cursor: pointer;
-    margin: var(--gap-nav);
-    border-radius: 10px;
-    padding-bottom: 30px;
-    background-color: var(--tertiary-color);
+    height: 250px;
+    border-radius: 5px 5px 0 0;
+    filter: grayscale(100%);
+}
+
+.game-portfolio div:hover {
+    transform: scale(1.04);
+}
+
+.game-portfolio div:hover img {
+    filter: grayscale(0%);
 }
 
 /* loader */
