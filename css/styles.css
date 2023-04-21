@@ -80,7 +80,7 @@ header > div > img:hover {
 }
   
 .hamburger{
-    padding-top: 18%;
+    padding-top: 27%;
     display: none;
     grid-column: 1;
     -webkit-transition: all 0.3s ease-in-out;
@@ -89,7 +89,7 @@ header > div > img:hover {
 }
   
 .hamburger.is-active{
-    padding-top: 28%;
+    padding-top: 35%;
     animation: smallbig 0.6s forwards;
 }
   
@@ -134,7 +134,6 @@ header > div > img:hover {
     -o-transform: translateY(-13px) rotate(-45deg);
     transform: translateY(-13px) rotate(-45deg);
 }
-  
 
 /* main */
 main {
@@ -405,7 +404,13 @@ a{
         display: block;
     }
     nav {
-        display: none;
+        position: absolute;
+        z-index: 1;
+        width: 70vw;
+        height: 70vh;
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     }
     main {
         grid-template-columns: 5fr;
