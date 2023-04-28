@@ -22,11 +22,23 @@ var links_section = document.getElementById("links-section");
 var hamburger = document.querySelector(".hamburger");
 var searchbutton = document.getElementById("search-bar-button");
 
+//group nav buttons
+var buttons = [library, stores, settings, downloads, manage, links, documentation];
+
 // library button background color #0d9488 as default
 library.style.backgroundColor = "#115e59";
 //loading and links display none as default
 loading.style.display = "none";
 links_section.style.display = "none";
+
+//hamburger toggle class is-active on click
+document.addEventListener('DOMContentLoaded', function() {
+    [].forEach.call(document.querySelectorAll(".hamburger"), function(el) {
+       el.addEventListener('click', function() {
+          document.querySelector(".hamburger").classList.toggle("is-active"); 
+       })
+    })
+});
 
 //add event listener on click to hamburger button
 hamburger.addEventListener("click", function() {
@@ -58,48 +70,13 @@ restore.addEventListener("click", function() {
     }
 });
 
-//add event listener on click to close button or exit button
+//add event listener on click to close button and exit button
 close.addEventListener("click", function() {
     location.href = "https://www.google.com";
 });
 
 exit.addEventListener("click", function() {
     location.href = "https://www.google.com";
-});
-
-//add event listener on click to library button and run function active
-library.addEventListener("click", function() {
-    active.call(this);
-});
-
-//add event listener on click to stores button and run function active
-stores.addEventListener("click", function() {
-    active.call(this);
-});
-
-//add event listener on click to settings button and run function active
-settings.addEventListener("click", function() {
-    active.call(this);
-});
-
-//add event listener on click to downloads button and run function active
-downloads.addEventListener("click", function() {
-    active.call(this);
-});
-
-//add event listener on click to manage accounts button and run function active
-manage.addEventListener("click", function() {
-    active.call(this);
-});
-
-//add event listener on click to links button and run function active
-links.addEventListener("click", function() {
-    active.call(this);
-});
-
-//add event listener on click to documentation button and run function active
-documentation.addEventListener("click", function() {
-    active.call(this);
 });
 
 //add event listener on click all span
@@ -126,13 +103,14 @@ linux.addEventListener("click", function() {
     windows.src = "./img/microsoft-windows.png";
 });
 
-//hamburger toggle class is-active on click
-document.addEventListener('DOMContentLoaded', function() {
-    [].forEach.call(document.querySelectorAll(".hamburger"), function(el) {
-       el.addEventListener('click', function() {
-          document.querySelector(".hamburger").classList.toggle("is-active"); 
-       })
-    })
+//add event listener on click to all buttons
+buttons.forEach(function(button) {
+    button.addEventListener("click", function() {
+        //grab id name of clicked button
+        var id = this.id;
+        //run function active and pass id name
+        active.call(this);
+    });
 });
 
 //create function active
@@ -154,7 +132,6 @@ function active() {
 }
 
 function display(id) {
-    console.log(id);
     //if id name is equal to library do nothing
     if (id == "library") {
         //games display block
