@@ -1,5 +1,5 @@
 # dashboard
-This dashboard is not made to make any tricks. It is just a project to summarize what i learned about grid.
+As a part of the course, I was supposed to make a dashboard where I was able to practice my knowledge of using a grid. Unfortunately, it doesn't look like a dashboard in any way as I was inspired by a heroic launcher. The basic concept of this project was preserved as I use grid to layout fake game images and some menu buttons. Images were made by using modjurney.
 ## Demo
 
 <a href="https://aaxtrox.github.io/dashboard/">Live Demo</a>
