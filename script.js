@@ -1,3 +1,4 @@
+//current year for links section
 document.getElementById("year").innerHTML = new Date().getFullYear();
 
 // select buttons
@@ -21,7 +22,7 @@ var links_section = document.getElementById("links-section");
 var hamburger = document.querySelector(".hamburger");
 var searchbutton = document.getElementById("search-bar-button");
 
-// library background color #0d9488 as default
+// library button background color #0d9488 as default
 library.style.backgroundColor = "#115e59";
 //loading and links display none as default
 loading.style.display = "none";
@@ -41,7 +42,7 @@ hamburger.addEventListener("click", function() {
         document.querySelector("nav").style.transform = "translate(-100%, 0)";
         //delay 0.3s
         setTimeout(function() {
-            //set searchbutton to display block
+            //set search button to display block
             searchbutton.style.display = "block";
         }, 300);
     }
@@ -125,6 +126,7 @@ linux.addEventListener("click", function() {
     windows.src = "./img/microsoft-windows.png";
 });
 
+//hamburger toggle class is-active on click
 document.addEventListener('DOMContentLoaded', function() {
     [].forEach.call(document.querySelectorAll(".hamburger"), function(el) {
        el.addEventListener('click', function() {
